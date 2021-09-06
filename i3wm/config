@@ -13,11 +13,11 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+#font pango:monospace 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 10
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -105,16 +105,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
+set $ws1 "1.Editor"
+set $ws2 "2.Pages"
+set $ws3 "3.Debug"
+set $ws4 "4.Deploy"
+set $ws5 "5.Spy"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "bg.jobs"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -181,7 +181,7 @@ bar {
 }
 
 #set wallpaper
-exec feh --bg-fill /home/thanos/Pictures/wallpapers/157863.jpg
+exec feh --bg-fill /home/thanos/Pictures/wallpapers/linux.jpg
 
 # xrandr auto
 exec xrandr --output LVDS-1 --primary --mode 1366x768 --pos 0x1920 --rotate normal --output VGA-1 --mode 1920x1080 --pos 0x0 --rotate right --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off --output HDMI-3 --off --output DP-2 --off --output DP-3 --off
@@ -195,8 +195,6 @@ exec_always --no-startup-id ibus-daemon --xim -d -r
 title_align right
 
 default_border pixel 1
-default_floating_border pixel 3
+default_floating_border normal
 
 hide_edge_borders smart
-
-#
